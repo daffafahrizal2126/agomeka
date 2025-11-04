@@ -2,12 +2,12 @@ import Page from '@/layouts/Page'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 
-export default function MateriKalimatEfektif() {
+export default function MateriKalimatSPOK() {
   return (
     <Page>
       <div className="relative overflow-hidden min-h-[65svh]">
         <h1 className="text-3xl font-bold text-center text-[var(--color-agmBlue)] mb-3 lg:mb-10">
-          Kalimat Efektif
+          Kalimat SPOK
         </h1>
 
         <div className="grid md:grid-cols-[45%_1fr] gap-8 items-start">
@@ -15,65 +15,111 @@ export default function MateriKalimatEfektif() {
           <article
             className="
               card w-full self-start
-             max-h-[50vh] lg:max-h-[70svh] overflow-auto text-sm
+              max-h-[50vh] lg:max-h-[70svh] overflow-auto text-sm
               bg-white/90 backdrop-blur-sm
-              pb-24 md:pb-0  /* ruang ekstra di HP agar tidak nempel tombol */
+              pb-24 md:pb-0
             "
           >
+            {/* PENGERTIAN */}
             <p className="text-base">
-              <b>Kalimat efektif</b> adalah kalimat yang mudah dipahami, ringkas, dan menggunakan
-              kata baku.
+              <b>Kalimat SPOK</b> adalah kalimat yang disusun berurutan:{' '}
+              <b className="text-green-600">S</b>ubjek,
+              <b className="text-blue-600"> P</b>redikat, <b className="text-orange-600">O</b>bjek,
+              lalu <b className="text-purple-600">K</b>eterangan. Susunan ini membantu kalimat
+              menjadi jelas dan mudah dipahami.
             </p>
 
-            <h3 className="mt-3 font-semibold">Ciri Kalimat Efektif</h3>
-            <ul className="list-disc pl-5 space-y-1">
+            {/* SUSUNAN */}
+            <h3 className="mt-3 font-semibold">Susunan</h3>
+            <ul className="list-disc pl-5 space-y-2">
               <li>
-                <b className="text-blue-600">Ringkas</b>: tidak bertele-tele.
+                <b className="text-green-600">Subjek (S)</b>
+                <div className="pl-2">
+                  <div>
+                    <b>Definisi:</b> siapa/apa yang dibicarakan.
+                  </div>
+                  <div>
+                    <b>Contoh:</b> <span className="text-green-600">Rina</span> makan roti.
+                  </div>
+                </div>
               </li>
               <li>
-                <b className="text-green-600">Jelas</b>: ada subjek dan predikat yang tegas.
+                <b className="text-blue-600">Predikat (P)</b>
+                <div className="pl-2">
+                  <div>
+                    <b>Definisi:</b> tindakan/keadaan yang dilakukan subjek.
+                  </div>
+                  <div>
+                    <b>Contoh:</b> Rina <span className="text-blue-600">makan</span> roti.
+                  </div>
+                </div>
               </li>
               <li>
-                <b className="text-purple-600">Baku</b>: memakai ejaan dan kata yang benar.
+                <b className="text-orange-600">Objek (O)</b>
+                <div className="pl-2">
+                  <div>
+                    <b>Definisi:</b> yang dikenai pekerjaan.
+                  </div>
+                  <div>
+                    <b>Contoh:</b> Rina makan <span className="text-orange-600">roti</span>.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <b className="text-purple-600">Keterangan (K)</b>
+                <div className="pl-2">
+                  <div>
+                    <b>Definisi:</b> informasi tambahan: waktu, tempat, cara, alat, dsb.
+                  </div>
+                  <div>
+                    <b>Contoh:</b> Rina makan roti <span className="text-purple-600">di dapur</span>
+                    .
+                  </div>
+                </div>
               </li>
             </ul>
 
+            {/* CONTOH BENAR */}
             <h3 className="mt-3 font-semibold">Contoh Benar</h3>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <b className="text-green-600">Saya</b> (S) <b className="text-blue-600">makan</b>{' '}
+                <b className="text-green-600">Rina</b> (S) <b className="text-blue-600">makan</b>{' '}
                 (P)
-                <b className="text-orange-600"> nasi</b> (O){' '}
-                <b className="text-purple-600">di rumah</b> (K). ✅
+                <b className="text-orange-600"> roti</b> (O){' '}
+                <b className="text-purple-600">di dapur</b> (K). ✅
               </li>
               <li>
-                <b className="text-green-600">Guru</b> (S) <b className="text-blue-600">mengajar</b>{' '}
+                <b className="text-green-600">Ayah</b> (S){' '}
+                <b className="text-blue-600">memperbaiki</b> (P)
+                <b className="text-orange-600"> sepeda</b> (O){' '}
+                <b className="text-purple-600">di garasi</b> (K). ✅
+              </li>
+              <li>
+                <b className="text-green-600">Siswa</b> (S) <b className="text-blue-600">membaca</b>{' '}
                 (P)
-                <b className="text-orange-600"> siswa</b> (O){' '}
-                <b className="text-purple-600">dengan sabar</b> (K). ✅
+                <b className="text-orange-600"> buku cerita</b> (O){' '}
+                <b className="text-purple-600">di perpustakaan</b> (K). ✅
               </li>
             </ul>
 
-            <h3 className="mt-3 font-semibold">Contoh Salah & Perbaikan</h3>
+            {/* CONTOH SALAH */}
+            <h3 className="mt-3 font-semibold">Contoh Salah</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                Salah: <i>Naik ke atas tangga.</i> ❌ (kata <i>ke atas</i> mubazir)
-                <br />
-                Benar: <b className="text-blue-600">Naik tangga.</b> ✅
+                <i>Di sekolah membaca buku siswa.</i> ❌ (Urutan K–P–O–S, tidak sesuai SPOK)
               </li>
               <li>
-                Salah: <i>Saya yang belajar di sekolah setiap hari selalu.</i> ❌ (kata tidak
-                teratur)
-                <br />
-                Benar: <b className="text-green-600">Saya</b>{' '}
-                <b className="text-blue-600">belajar</b>{' '}
-                <b className="text-purple-600">setiap hari di sekolah.</b> ✅
+                <i>Membeli pensil di toko.</i> ❌ (Tanpa Subjek)
               </li>
               <li>
-                Salah: <i>Terimakasih atas perhatiannya bapak ibu guru.</i> ❌ (tidak baku)
-                <br />
-                Benar:{' '}
-                <b className="text-purple-600">Terima kasih atas perhatian Bapak Ibu Guru.</b> ✅
+                <i>Rina makan di kantin nasi.</i> ❌ (Objek dan Keterangan tertukar)
+              </li>
+              <li>
+                <i>
+                  Adik bermain bola kasti kemarin sore di lapangan bersama teman-teman kelas empat
+                  A.
+                </i>{' '}
+                ❌ (Keterangan terlalu panjang; buat ringkas)
               </li>
             </ul>
           </article>
@@ -82,17 +128,13 @@ export default function MateriKalimatEfektif() {
           <div className="pointer-events-none">
             <img
               src="/assets/char4.png"
-              alt="Ilustrasi anak belajar kalimat efektif"
+              alt="Ilustrasi anak belajar kalimat SPOK"
               className="
                 object-contain select-none opacity-95
                 transition-all duration-500 ease-in-out
-
-                /* ukuran adaptif: besar di desktop, aman di HP (portrait & landscape) */
                 w-[clamp(320px,50vw,900px)]
                 md:w-[clamp(420px,48vw,980px)]
                 max-h-[clamp(220px,62svh,780px)]
-
-                /* sedikit geser kanan agar tidak menabrak teks */
                 translate-x-2 md:translate-x-6
               "
               draggable={false}
@@ -101,10 +143,10 @@ export default function MateriKalimatEfektif() {
           </div>
         </div>
 
-        {/* Tombol kiri bawah - kembali ke SPOK */}
+        {/* Tombol kiri bawah - kembali ke Kalimat Efektif */}
         <Link
-          to="/materi-kalimat-spok"
-          aria-label="Materi Kalimat SPOK"
+          to="/materi-kalimat-efektif"
+          aria-label="Materi Kalimat Efektif"
           className="
             fixed z-50 inline-flex items-center gap-2 rounded-full
             bg-[var(--color-agmBlue)] text-white shadow-lg border border-agmRed
@@ -115,7 +157,7 @@ export default function MateriKalimatEfektif() {
           "
         >
           <ArrowLeft size={18} />
-          <span className="text-sm font-semibold hidden sm:inline">Materi Kalimat SPOK</span>
+          <span className="text-sm font-semibold hidden sm:inline">Kalimat Efektif</span>
         </Link>
 
         {/* Tombol kanan bawah - Kerjakan Soal */}

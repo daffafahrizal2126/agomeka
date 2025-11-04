@@ -39,7 +39,9 @@ export default function AppLayout() {
         </main>
 
         {/* GlobalMusic hanya aktif jika berada di halaman /daftar-isi */}
-        {isDaftarIsi && <GlobalMusic />}
+        <div className={`${isDaftarIsi ? 'block' : 'hidden'}`}>
+          <GlobalMusic />
+        </div>
       </div>
     </OrientationGate>
   )
